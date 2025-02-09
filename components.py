@@ -127,7 +127,7 @@ def render_history_view(data_handler):
     """Render the exercise history view"""
     history_df = data_handler.get_workout_history()
 
-    if history_df.empty:
+    if history_df is None:
         st.warning("No workout history available")
         return
 
