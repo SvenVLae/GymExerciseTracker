@@ -1,0 +1,18 @@
+[server]
+headless = true
+address = "localhost"
+port = 5000
+
+[global]
+dataFrameSerialization = "arrow"
+
+[theme]
+base = "dark"
+primaryColor="green"
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true
+
+[browser]
+gatherUsageStats = false
