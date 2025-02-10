@@ -60,12 +60,11 @@ def render_workout_form(data_handler):
                     """
                     if st.form_submit_button(f"**{exercise}**", use_container_width=True):
                         if f"isOpened_{workout}_{exercise}" not in st.session_state:
-                                st.session_state[f"isOpened_{workout}_{exercise}"] = False
-                            st.session_state[f"isOpened_{workout}_{exercise}"] = not st.session_state[f"isOpened_{workout}_{exercise}"]
-
+                            st.session_state[f"isOpened_{workout}_{exercise}"] = False
+                        st.session_state[f"isOpened_{workout}_{exercise}"] = not st.session_state[f"isOpened_{workout}_{exercise}"]
+                    
                     if last_workout is not None:
                         st.text("- Last: {last_workout['Date'].iloc[0]}")
-
                     
                     if f"isOpened_{workout}_{exercise}"in st.session_state and st.session_state[f"isOpened_{workout}_{exercise}"]:
                         save_col, del_col = st.columns([1, 1])
